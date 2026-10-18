@@ -1,0 +1,17 @@
+<h2>Películas mejor valoradas</h2>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+<div class="lista">
+  @for (movie of movies(); track movie.id) {
+    <div class="tarjeta" (click)="selectMovie(movie.id)">
+      @if (movie.poster_path) {
+        <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" [alt]="movie.title" />
+      }
+      <h3>{{ movie.title }}</h3>
+      <p>⭐ {{ movie.vote_average.toFixed(1) }}</p>
+    </div>
+  }
+</div>

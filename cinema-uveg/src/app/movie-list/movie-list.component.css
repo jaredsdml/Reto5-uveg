@@ -1,0 +1,31 @@
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.tarjeta {
+  background: #1e1e2f;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tarjeta:hover {
+  background: #2d2d44;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.tarjeta h3 {
+  font-size: 15px;
+  margin: 8px 0 4px;
+}
+
+.error {
+  color: #ff6b6b;
+}

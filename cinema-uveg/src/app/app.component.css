@@ -1,0 +1,16 @@
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: #9a9ab0;
+}
+
+h1 {
+  text-align: center;
+}

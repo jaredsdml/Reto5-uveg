@@ -1,0 +1,27 @@
+<div class="detalle">
+  <button (click)="close()">Cerrar</button>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  @if (movie(); as m) {
+    <h2>{{ m.title }}</h2>
+    @if (m.poster_path) {
+      <img [src]="'https://image.tmdb.org/t/p/w300' + m.poster_path" [alt]="m.title" />
+    }
+    @if (m.tagline) {
+      <p><em>{{ m.tagline }}</em></p>
+    }
+    <p>{{ m.overview }}</p>
+    <p><strong>Fecha de estreno:</strong> {{ m.release_date }}</p>
+    <p><strong>Duración:</strong> {{ m.runtime }} min</p>
+    <p><strong>Calificación:</strong> {{ m.vote_average.toFixed(1) }}</p>
+    <p>
+      <strong>Géneros:</strong>
+      @for (g of m.genres; track g.id) {
+        <span class="genero">{{ g.name }}</span>
+      }
+    </p>
+  }
+</div>

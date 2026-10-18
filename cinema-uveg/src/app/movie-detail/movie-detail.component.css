@@ -1,0 +1,25 @@
+.detalle {
+  background: #1e1e2f;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flow-root;
+}
+
+.detalle img {
+  float: left;
+  margin-right: 16px;
+  border-radius: 6px;
+}
+
+.genero {
+  background: #3a3a5c;
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.error {
+  color: #ff6b6b;
+}

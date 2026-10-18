@@ -1,0 +1,13 @@
+<main>
+  <h1>Cinema UVEG</h1>
+
+  @if (selectedMovieId(); as id) {
+    <app-movie-detail [movieId]="id" (closed)="onDetailClosed()" />
+  }
+
+  <app-movie-list (movieSelected)="onMovieSelected($event)" />
+
+  <footer>
+    Este producto usa el API de TMDB pero no está avalado ni certificado por TMDB.
+  </footer>
+</main>
